@@ -1,0 +1,101 @@
+:root {
+    --bg-darker: rgb(32, 31, 31);
+    --bg-dark-mid: rgb(45, 44, 44);
+    --bg-dark: rgb(36, 36, 36);
+    --txt-dark: rgb(179, 176, 173);
+    --bord: solid 1px black;
+}
+
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-darker);
+    color: var(--txt-dark);
+}
+
+
+/* Right side */
+.container {
+    display: flex;
+}
+
+.options {
+    flex: 3.5;
+}
+
+.bg-settings {
+    border-left: solid 1px grey;
+}
+
+.bg-settings-header {
+    display: flex;
+    border-bottom: var(--bord);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bg-settings-header > p {
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+.material-symbols-outlined {
+    padding-right: 20px;
+}
+
+.bgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px 0 0 0;
+}
+
+.bgs > img {
+    margin: 10px;
+    border-radius: 1px;
+}
+
+.bgs > img:hover {
+    cursor: pointer;
+}
+
+/* Left side */
+.options {
+    display: flex;
+    flex-direction: column;
+}
+.options-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.options-middle {
+    display: flex;
+    justify-content: space-around
+}
+
+.container-camera {
+    display: flex;
+    flex-direction: column;
+    border: var(--bord);
+    border-radius: 1px;
+    width: 450px;
+}
+
+.camera {
+    background-color: var(--bg-dark);
+    height: 210px;
+}
+
+.options-camera {
+    background-color: var(--bg-dark-mid);
+    border-top: var(--bord);
+    border-radius: 1px;
+    height: 40px;
+}
+
+.settings {
+    background-color: var(--bg-dark-mid);
+    height: 250px;
+    width: 450px;
+}
