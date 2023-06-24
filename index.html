@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microsoft Teams</title>
-    <link rel="stylesheet" href="./style.css">
 
+    <title>Microsoft Teams Layout</title>
+
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -18,16 +22,59 @@
                 <input type="text" class="name" placeholder="Your name">
             </div>
             <div class="options-middle">
-                <div class="container-camera">
-                    <div class="camera"></div>
-                    <div class="options-camera"></div>
+                <!-- Left side -->
+                <div class="container-camera">  
+                    <div class="camera">
+                        <div class="material-symbols-outlined">videocam_off</div>
+                        <div>Your camera is turned off</div>
+                    </div>
+                    <div class="options-camera">
+                        <div class="material-symbols-outlined">videocam_off</div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="material-symbols-outlined background-replace">background_replace</span>
+                        <div>Background filters</div>
+                        <span class="material-symbols-outlined settings">settings</span>
+                    </div>
                 </div>
-                <div class="settings">
+                <!-- Right side -->
+                <div class="settings-menu">
                     <div class="audio">
-                        <div class="computer-audio">Computer audio</div>
-                        <div class="computer-audio-settings">Realtek High Definition Audio</div>
-                        <div class="phone-audio">Phone audio</div>
-                        <div class="no-audio">Don't use audio</div>
+                        <div class="pc-container">
+                            <div class="pc">
+                                <span class="material-symbols-outlined">computer</span>
+                                <div class="computer-audio">Computer audio</div>
+                                <input type="radio" class="radio"></input>
+                            </div>
+                            <div class="pc-settings">
+                                <div class="pc-settings-top">
+                                    <div class="computer-audio-settings">Realtek High Definition Audio</div>
+                                    <span class="material-symbols-outlined page-info">page_info</span>
+                                </div>
+                                <hr />
+                                <div class="pc-settings-bottom">
+                                    <span class="material-symbols-outlined">mic</span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span class="material-symbols-outlined volume-up">volume_up</span>
+                                    <input type="range" class="control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone">
+                            <span class="material-symbols-outlined">phone_in_talk</span>
+                            <div class="phone-audio">Phone audio</div>
+                            <input type="radio" class="radio"></input>
+                        </div>
+                        <div class="mute">
+                            <span class="material-symbols-outlined">volume_off</span>
+                            <div class="no-audio">Don't use audio</div>
+                            <input type="radio" class="radio"></input>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -35,14 +82,15 @@
                 <div class="cancel-button">Cancel</div>
                 <div class="join-button">Join now</div>
             </div>
-            <footer class="footer">For a better experience, <span>sign in</span> or <span>download the desktop app.</span></footer>
+            <footer class="footer"><p>For a better experience, <span>sign in</span> or <span>download the desktop app</span>.</p></footer>
         </div>
+        <!-- Backgrounds side -->
         <div class="bg-settings">
             <div class="bg-settings-header">
-                <p>Background settings</p>
-                <span class="material-symbols-outlined">close</span>
+                <p class="bg-text">Background settings</p>
+                <span class="material-symbols-outlined close">close</span>
             </div>
-            <div class="bgs">
+            <div class="bgs scrollable-section">
                 <img src="./images/background.jpeg" width="150px" height="auto" alt="Effect none" class="effect-1">
                 <img src="./images/background.jpeg" width="150px" height="auto" alt="Effect blur" class="effect-2">
                 <img src="./images/background.jpeg" width="150px" height="auto" alt="Background 1" class="effect-3">
